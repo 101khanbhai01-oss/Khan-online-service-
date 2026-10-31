@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>খাঁন অনলাইন সার্ভিস | ব্রাহ্মণবাড়িয়া</title>
+<meta name="description" content="খাঁন অনলাইন সার্ভিস। ই-পাসপোর্ট, জন্ম নিবন্ধন, এনআইডি, পুলিশ ক্লিয়ারেন্স ও সকল অনলাইন আবেদন।">
+<meta name="theme-color" content="#101C35">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--navy:#101C35;
+--navy2:#243653;
+--gold:#D6B875;
+--goldlight:#F0DDAA;
+--pearl:#F7F5EF;
+--white:#FFFFFF;
+--text:#253149;
+--muted:#68758A;
+--green:#16865B;
+--shadow:0 12px 35px rgba(16,28,53,.10);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth;scroll-padding-top:75px}
+
+body{
+font-family:"Noto Sans Bengali",Arial,sans-serif;
+background:var(--pearl);
+color:var(--text);
+line-height:1.8;
+}
+
+header{
+background:linear-gradient(135deg,#101C35,#243653);
+color:white;text-align:center;
+padding:35px 15px 30px;
+border-bottom:3px solid var(--gold);
+}
+
+.logo{color:var(--goldlight);font-size:32px;font-weight:800}
+header p{color:#E0E7F1;font-size:14px;margin-top:5px}
+
+nav{
+background:#101C35;
+display:flex;justify-content:center;align-items:center;
+flex-wrap:wrap;gap:5px;padding:12px 8px;
+position:sticky;top:0;z-index:100;
+box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+nav a{
+color:#F0DDAA;text-decoration:none;
+padding:7px 12px;border-radius:7px;
+font-size:13px;font-weight:600;transition:.3s;
+}
+
+nav a:hover{background:var(--gold);color:var(--navy)}
+
+.hero{
+min-height:440px;padding:85px 20px;
+text-align:center;color:white;
+background:
+radial-gradient(circle at 50% 0%,rgba(214,184,117,.18),transparent 45%),
+linear-gradient(135deg,#101C35,#1C2D4A 65%,#243653);
+display:flex;flex-direction:column;
+align-items:center;justify-content:center;
+}
+
+.welcome{
+display:inline-block;color:var(--goldlight);
+border:1px solid rgba(214,184,117,.55);
+background:rgba(214,184,117,.08);
+padding:7px 18px;border-radius:30px;
+font-size:14px;margin-bottom:15px;
+}
+
+.hero h1{
+color:var(--goldlight);font-size:38px;
+line-height:1.5;margin:5px 0;
+}
+
+.hero p{
+max-width:700px;color:#E4EAF3;
+font-size:16px;margin:16px auto 22px;
+}
+
+.btn{
+display:inline-block;padding:11px 22px;
+border-radius:9px;text-decoration:none;
+font-weight:700;font-size:14px;
+margin:5px;transition:.3s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+
+.primary{
+background:linear-gradient(135deg,#D6B875,#F0DDAA);
+color:#101C35;
+}
+
+.secondary{
+background:transparent;border-color:var(--gold);
+color:var(--goldlight);
+}
+
+.whatsapp{background:#16865B;color:white}
+
+section{padding:65px 18px}
+
+.container{max-width:1150px;margin:auto}
+
+.title{
+color:var(--navy);text-align:center;
+font-size:29px;font-weight:800;
+margin-bottom:12px;
+}
+
+.title::after{
+content:"";display:block;width:65px;height:3px;
+background:var(--gold);margin:12px auto 22px;
+border-radius:5px;
+}
+
+.subtitle{
+text-align:center;color:var(--muted);
+margin-bottom:32px;
+}
+
+#services{background:var(--pearl)}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:20px;
+}
+
+.service{
+background:white;text-align:center;
+padding:27px 17px;border-radius:14px;
+border:1px solid #E9E1CF;
+box-shadow:var(--shadow);transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-7px);
+border-color:var(--gold);
+box-shadow:0 15px 35px rgba(16,28,53,.15);
+}
+
+.service span{
+display:inline-flex;align-items:center;
+justify-content:center;width:68px;height:68px;
+background:#F7F2E5;border-radius:50%;
+font-size:34px;margin-bottom:10px;
+}
+
+.service h3{color:var(--navy);font-size:17px;margin:5px 0}
+.service p{color:var(--muted);font-size:14px}
+
+.about{
+background:white;
+border-top:1px solid #EAE2D1;
+border-bottom:1px solid #EAE2D1;
+}
+
+.about p{
+max-width:850px;margin:12px auto;
+text-align:center;color:#526078;
+}
+
+.contact{background:var(--pearl)}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;max-width:850px;margin:30px auto;
+}
+
+.contact-card{
+background:white;border:1px solid #E7D9B9;
+border-top:4px solid var(--gold);
+border-radius:14px;padding:28px 20px;
+text-align:center;box-shadow:var(--shadow);
+}
+
+.contact-card h3{color:var(--navy);margin-bottom:10px;font-size:20px}
+.contact-card strong{color:#263954}
+.contact-card p{margin:9px 0;color:#526078}
+.contact-card a:not(.btn){color:#243F69;text-decoration:none;font-weight:600}
+
+.contact-details{text-align:center;margin-top:25px;color:#526078}
+.contact-details p{margin:10px 0}
+.contact-details a{color:#243F69;text-decoration:none;font-weight:600}
+
+.location-section{
+background:white;border-top:1px solid #EAE2D1;
+}
+
+.map-box{
+max-width:950px;margin:25px auto 0;
+padding:10px;background:white;
+border:1px solid #E7D9B9;
+border-radius:16px;box-shadow:var(--shadow);
+}
+
+.map-box iframe{
+display:block;width:100%;height:350px;
+border:0;border-radius:10px;
+}
+
+footer{
+background:linear-gradient(135deg,#101C35,#243653);
+color:#DCE4EF;text-align:center;
+padding:35px 15px;border-top:3px solid var(--gold);
+}
+
+footer h3{color:var(--goldlight);font-size:23px;margin-bottom:7px}
+footer p{font-size:13px;margin:6px}
+
+@media(max-width:600px){
+.logo{font-size:25px}
+.hero{min-height:390px;padding:65px 15px}
+.hero h1{font-size:27px}
+.hero p{font-size:14px}
+.title{font-size:24px}
+section{padding:48px 14px}
+nav{gap:2px}
+nav a{font-size:11px;padding:6px 8px}
+.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.service{padding:20px 10px}
+.service h3{font-size:14px}
+.service p{font-size:12px}
+.service span{width:55px;height:55px;font-size:28px}
+.contact-grid{grid-template-columns:1fr}
+.map-box iframe{height:280px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">খাঁন অনলাইন সার্ভিস</div>
+<p>আপনার বিশ্বস্ত অনলাইন সেবা কেন্দ্র</p>
+</header>
+
+<nav>
+<a href="#home">হোম</a>
+<a href="#services">আমাদের সেবা</a>
+<a href="#about">আমাদের সম্পর্কে</a>
+<a href="#contact">যোগাযোগ</a>
+<a href="#location">লোকেশন</a>
+</nav>
+
+<div class="hero" id="home">
+<div class="welcome">আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ</div>
+<h1>আপনাকে স্বাগতম</h1>
+<h1>খাঁন অনলাইন সার্ভিস</h1>
+<p>সকল প্রকার অনলাইন আবেদন ও ডিজিটাল সেবা আন্তরিকতা ও বিশ্বস্ততার সঙ্গে প্রদান করা হয়।</p>
+<div>
+<a href="tel:+8801603308101" class="btn secondary">📞 কল করুন</a>
+<a href="https://wa.me/8801603308101" class="btn whatsapp">WhatsApp</a>
+</div>
+</div>
+
+<section id="services">
+<div class="container">
+<h2 class="title">আমাদের সেবাসমূহ</h2>
+<p class="subtitle">আপনার প্রয়োজনীয় সকল অনলাইন সেবা এক ঠিকানায়।</p>
+
+<div class="services">
+
+<div class="service"><span>🛂</span><h3>ই-পাসপোর্ট আবেদন</h3><p>নতুন পাসপোর্ট ও পাসপোর্ট সংক্রান্ত আবেদন।</p></div>
+
+<div class="service"><span>📜</span><h3>জন্ম নিবন্ধন</h3><p>জন্ম নিবন্ধনের আবেদন ও সংশোধন।</p></div>
+
+<div class="service"><span>📄</span><h3>মৃত্যু নিবন্ধন</h3><p>মৃত্যু নিবন্ধনের অনলাইন আবেদন।</p></div>
+
+<div class="service"><span>🪪</span><h3>জাতীয় পরিচয়পত্র</h3><p>নতুন এনআইডি ও অন্যান্য আবেদন।</p></div>
+
+<div class="service"><span>✏️</span><h3>এনআইডি সংশোধন</h3><p>জাতীয় পরিচয়পত্রের তথ্য সংশোধন।</p></div>
+
+<div class="service"><span>👮</span><h3>পুলিশ ক্লিয়ারেন্স</h3><p>পুলিশ ক্লিয়ারেন্সের অনলাইন আবেদন।</p></div>
+
+<div class="service"><span>💼</span><h3>চাকরির আবেদন</h3><p>সরকারি ও বেসরকারি চাকরির আবেদন।</p></div>
+
+<div class="service"><span>🎓</span><h3>ভর্তি আবেদন</h3><p>স্কুল, কলেজ ও বিশ্ববিদ্যালয়ে ভর্তি আবেদন।</p></div>
+
+<div class="service"><span>📚</span><h3>পরীক্ষার ফলাফল</h3><p>বিভিন্ন পরীক্ষার ফলাফল সংগ্রহ।</p></div>
+
+<div class="service"><span>💻</span><h3>অন্যান্য অনলাইন সেবা</h3><p>বিভিন্ন ধরনের ডিজিটাল সেবা ও আবেদন।</p></div>
+
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<h2 class="title">আমাদের লক্ষ্য হলো</h2>
+<p> সাধারণ মানুষের জন্য অনলাইন সেবা গ্রহণকে আরও সহজ, দ্রুত ও সুবিধাজনক করে তোলা। গ্রাহকদের বিশ্বাসকে সর্বোচ্চ গুরুত্ব দিয়ে আমরা সেবার মান বজায় রাখার ।
+খাঁন অনলাইন সার্ভিস — আপনার বিশ্বস্ত সেবায়, সবসময় নিয়োজিত।
+  আমাদের পাশে থাকার জন্য ধন্যবাদ। জাযাকাল্লাহু খাইরান।</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="title">যোগাযোগ করুন</h2>
+<p class="subtitle">যেকোনো প্রয়োজনে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>প্রোপ্রাইটর</h3>
+<p><strong> মোঃ আনিছ খাঁন</strong></p>
+<p>📞 <a href="tel:+8801603308101">01603-308101</a></p>
+<a class="btn primary" href="tel:+8801603308101">কল করুন</a>
+</div>
+
+<div class="contact-card">
+<h3>পরিচালনায়</h3>
+<p><strong>মোঃ আরিফ খাঁন</strong></p>
+<p>📞 <a href="tel:+8801727215436">01727-215436</a></p>
+<p><strong>মোঃ আসিফ খাঁন</strong></p>
+  <p>📞 <a href="tel:+8801991282129">01991-282129</a></p>
+<a class="btn primary" href="tel:+8801727215436">কল করুন</a>
+</div>
+</div>
+
+<div class="contact-details">
+<p><strong>📍 ঠিকানা:</strong> পূর্ব মেড্ডা পাসপোর্ট অফিস সংলগ্ন, রাস্তার পশ্চিম পার্শ্বে, ব্রাহ্মণবাড়িয়া।</p>
+<p><strong>✉️ ইমেইল:</strong> <a href="mailto:101khanbhai01@gmail.com">101khanbhai01@gmail.com</a></p>
+<a class="btn whatsapp" href="https://wa.me/8801603308101">WhatsApp-এ যোগাযোগ করুন</a>
+</div>
+
+</div>
+</section>
+
+<section class="location-section" id="location">
+<div class="container">
+<h2 class="title">📍 আমাদের অবস্থান</h2>
+<p class="subtitle">পূর্ব মেড্ডা, ব্রাহ্মণবাড়িয়া পাসপোর্ট অফিস সংলগ্ন।</p>
+
+<div class="map-box">
+<iframe
+src="https://maps.google.com/maps?q=Regional%20Passport%20Office%20Brahmanbaria%20Bangladesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+allowfullscreen
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
+<p style="text-align:center;margin-top:20px;color:#526078">
+কবরস্থান রোড, মেড্ডা বাসস্ট্যান্ড সংলগ্ন, ব্রাহ্মণবাড়িয়া।
+</p>
+
+<div style="text-align:center;margin-top:15px">
+<a class="btn primary"
+href="https://www.google.com/maps/search/?api=1&query=Regional+Passport+Office+Brahmanbaria"
+target="_blank" rel="noopener">
+Google Maps-এ রাস্তা দেখুন
+</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<h3>খাঁন অনলাইন সার্ভিস</h3>
+<p>আপনার বিশ্বস্ত অনলাইন সেবা কেন্দ্র</p>
+<p>📍 ব্রাহ্মণবাড়িয়া, বাংলাদেশ</p>
+<p>© 2026 Khan Online Service. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+</body>
+</html>
